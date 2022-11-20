@@ -7,7 +7,7 @@ class ShieldsController {
     }
     async getOneShieldsItem(req, res) {
         const { id } = req.params
-        const oneShieldItem = await db.query('SELECT * FROM shields')
+        const oneShieldItem = await db.query('SELECT * FROM shields WHERE id = $1', [id])
         res.json(oneShieldItem.rows[0])
     }
 }
