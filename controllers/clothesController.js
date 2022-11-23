@@ -2,7 +2,7 @@ const db = require('../db')
 
 class ClothesController {
     async getClothes(req, res) {
-        const clothes = await db.query('SELECT id, name, price, image FROM clothes;')
+        const clothes = await db.query('SELECT id, name, price, image FROM clothes ORDER BY(id);')
         res.json(clothes.rows)
     }
 
