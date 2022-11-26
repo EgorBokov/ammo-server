@@ -1,13 +1,14 @@
 const Router = require('express')
 const router = new Router()
 const nodemailer = require('nodemailer')
+const fs = require('fs')
+const path = require('path')
 const db = require('../db')
 const medicalRouter = require('./medicalRouter')
 const clothesRouter = require('./clothesRouter')
 const shieldsRouter = require('./shieldsRouter')
 const backpacksRouter = require('./backpacksRouter')
 const guardsRouter = require('./guardsRouter')
-const {getLogger} = require("nodemailer/lib/shared");
 
 router.get('/categories', async (req, res) => {
     const links = await db.query('SELECT * FROM categories;')
@@ -33,17 +34,24 @@ function createPurchase(req, res) {
             pass: 'ljtpzjempymnqlwf'
         }
     })
+    let html = null
+    fs.readFileSync(path.resolve(__dirname, 'index.html'), (err, data) => {
+        html = data
+        console.log(html)
+    })
 
     const message = {
         from: 's1lice.egor@gmail.com',
         to: email,
         subject: `Заказ в ${country}, ${city}`,
-        text: `${name} ${email} ${phone} ${country} ${city}`
+        text: "test text",
+        html: "<div><p style='color: red;'>${name} ${email}</p></div>"
     }
 
     transport.sendMail(message, (err) => {
         if (err) {
-            return console.log(err)
+            console.log(err)
+            return res.json({ message: err.cause.toString() || 'Error during ' })
         }
         res.json({message: 'Сообщение было отправлено успешно!'})
     })
