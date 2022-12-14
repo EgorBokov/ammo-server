@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: backpacks; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: backpacks; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.backpacks (
@@ -33,10 +33,10 @@ CREATE TABLE public.backpacks (
 );
 
 
-ALTER TABLE public.backpacks OWNER TO egorbokov;
+ALTER TABLE public.backpacks OWNER TO postgres;
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: backpacks_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.backpacks_id_seq
@@ -48,17 +48,17 @@ CREATE SEQUENCE public.backpacks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.backpacks_id_seq OWNER TO egorbokov;
+ALTER TABLE public.backpacks_id_seq OWNER TO postgres;
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: backpacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.backpacks_id_seq OWNED BY public.backpacks.id;
 
 
 --
--- Name: categories; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: categories; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.categories (
@@ -69,10 +69,10 @@ CREATE TABLE public.categories (
 );
 
 
-ALTER TABLE public.categories OWNER TO egorbokov;
+ALTER TABLE public.categories OWNER TO postgres;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.categories_id_seq
@@ -84,17 +84,17 @@ CREATE SEQUENCE public.categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.categories_id_seq OWNER TO egorbokov;
+ALTER TABLE public.categories_id_seq OWNER TO postgres;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
 
 
 --
--- Name: clothes; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: clothes; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.clothes (
@@ -108,10 +108,10 @@ CREATE TABLE public.clothes (
 );
 
 
-ALTER TABLE public.clothes OWNER TO egorbokov;
+ALTER TABLE public.clothes OWNER TO postgres;
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: clothes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.clothes_id_seq
@@ -123,17 +123,17 @@ CREATE SEQUENCE public.clothes_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.clothes_id_seq OWNER TO egorbokov;
+ALTER TABLE public.clothes_id_seq OWNER TO postgres;
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: clothes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.clothes_id_seq OWNED BY public.clothes.id;
 
 
 --
--- Name: guard; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: guard; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.guard (
@@ -150,10 +150,10 @@ CREATE TABLE public.guard (
 );
 
 
-ALTER TABLE public.guard OWNER TO egorbokov;
+ALTER TABLE public.guard OWNER TO postgres;
 
 --
--- Name: guard_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: guard_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.guard_id_seq
@@ -165,17 +165,17 @@ CREATE SEQUENCE public.guard_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.guard_id_seq OWNER TO egorbokov;
+ALTER TABLE public.guard_id_seq OWNER TO postgres;
 
 --
--- Name: guard_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: guard_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.guard_id_seq OWNED BY public.guard.id;
 
 
 --
--- Name: medicine; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: medicine; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.medicine (
@@ -189,10 +189,10 @@ CREATE TABLE public.medicine (
 );
 
 
-ALTER TABLE public.medicine OWNER TO egorbokov;
+ALTER TABLE public.medicine OWNER TO postgres;
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: medicine_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.medicine_id_seq
@@ -204,17 +204,17 @@ CREATE SEQUENCE public.medicine_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.medicine_id_seq OWNER TO egorbokov;
+ALTER TABLE public.medicine_id_seq OWNER TO postgres;
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: medicine_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.medicine_id_seq OWNED BY public.medicine.id;
 
 
 --
--- Name: shields; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: shields; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.shields (
@@ -229,10 +229,10 @@ CREATE TABLE public.shields (
 );
 
 
-ALTER TABLE public.shields OWNER TO egorbokov;
+ALTER TABLE public.shields OWNER TO postgres;
 
 --
--- Name: shields_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: shields_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.shields_id_seq
@@ -244,59 +244,59 @@ CREATE SEQUENCE public.shields_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.shields_id_seq OWNER TO egorbokov;
+ALTER TABLE public.shields_id_seq OWNER TO postgres;
 
 --
--- Name: shields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: shields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.shields_id_seq OWNED BY public.shields.id;
 
 
 --
--- Name: backpacks id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: backpacks id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.backpacks ALTER COLUMN id SET DEFAULT nextval('public.backpacks_id_seq'::regclass);
 
 
 --
--- Name: categories id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: categories id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.categories_id_seq'::regclass);
 
 
 --
--- Name: clothes id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: clothes id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.clothes ALTER COLUMN id SET DEFAULT nextval('public.clothes_id_seq'::regclass);
 
 
 --
--- Name: guard id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: guard id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.guard ALTER COLUMN id SET DEFAULT nextval('public.guard_id_seq'::regclass);
 
 
 --
--- Name: medicine id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: medicine id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.medicine ALTER COLUMN id SET DEFAULT nextval('public.medicine_id_seq'::regclass);
 
 
 --
--- Name: shields id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: shields id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.shields ALTER COLUMN id SET DEFAULT nextval('public.shields_id_seq'::regclass);
 
 
 --
--- Data for Name: backpacks; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: backpacks; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.backpacks (id, name, image, sizes, articul) FROM stdin;
@@ -313,7 +313,7 @@ COPY public.backpacks (id, name, image, sizes, articul) FROM stdin;
 
 
 --
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.categories (id, name, link, image) FROM stdin;
@@ -326,7 +326,7 @@ COPY public.categories (id, name, link, image) FROM stdin;
 
 
 --
--- Data for Name: clothes; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: clothes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.clothes (id, name, price, image, description, sizes, articul) FROM stdin;
@@ -351,7 +351,7 @@ COPY public.clothes (id, name, price, image, description, sizes, articul) FROM s
 
 
 --
--- Data for Name: guard; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: guard; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.guard (id, name, images, price, prim, extra_info, description, complectations, is_sertified, articul) FROM stdin;
@@ -374,7 +374,7 @@ COPY public.guard (id, name, images, price, prim, extra_info, description, compl
 
 
 --
--- Data for Name: medicine; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: medicine; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.medicine (id, name, description, contents, price, image, articul) FROM stdin;
@@ -384,7 +384,7 @@ COPY public.medicine (id, name, description, contents, price, image, articul) FR
 
 
 --
--- Data for Name: shields; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: shields; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.shields (id, name, description, price, images, annotation, extra_info, articul) FROM stdin;
@@ -403,49 +403,49 @@ COPY public.shields (id, name, description, price, images, annotation, extra_inf
 
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: backpacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.backpacks_id_seq', 10, true);
 
 
 --
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.categories_id_seq', 5, true);
 
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: clothes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.clothes_id_seq', 17, true);
 
 
 --
--- Name: guard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: guard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.guard_id_seq', 15, true);
 
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: medicine_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.medicine_id_seq', 2, true);
 
 
 --
--- Name: shields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: shields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.shields_id_seq', 11, true);
 
 
 --
--- Name: backpacks backpacks_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: backpacks backpacks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.backpacks
@@ -453,7 +453,7 @@ ALTER TABLE ONLY public.backpacks
 
 
 --
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.categories
@@ -461,7 +461,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: clothes clothes_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: clothes clothes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.clothes
@@ -469,7 +469,7 @@ ALTER TABLE ONLY public.clothes
 
 
 --
--- Name: guard guard_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: guard guard_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.guard
@@ -477,7 +477,7 @@ ALTER TABLE ONLY public.guard
 
 
 --
--- Name: medicine medicine_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: medicine medicine_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.medicine
@@ -485,7 +485,7 @@ ALTER TABLE ONLY public.medicine
 
 
 --
--- Name: shields shields_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: shields shields_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.shields
@@ -493,7 +493,7 @@ ALTER TABLE ONLY public.shields
 
 
 --
--- Name: TABLE categories; Type: ACL; Schema: public; Owner: egorbokov
+-- Name: TABLE categories; Type: ACL; Schema: public; Owner: postgres
 --
 
 GRANT ALL ON TABLE public.categories TO api_user;
