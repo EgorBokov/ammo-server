@@ -496,7 +496,7 @@ ALTER TABLE ONLY public.shields
 -- Name: TABLE categories; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT ALL ON TABLE public.categories TO api_user;
+GRANT ALL ON TABLE public.categories TO postgres;
 
 
 --
