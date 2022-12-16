@@ -94,6 +94,48 @@ ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
 
 
 --
+-- Name: clients; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.clients (
+    id integer NOT NULL,
+    name text,
+    total_price integer,
+    goods_amount integer,
+    date_of_transaction date,
+    email text,
+    country character varying(200),
+    city character varying(200),
+    phone bigint,
+    transaction_id bigint
+);
+
+
+ALTER TABLE public.clients OWNER TO postgres;
+
+--
+-- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.clients_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.clients_id_seq OWNER TO postgres;
+
+--
+-- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.clients_id_seq OWNED BY public.clients.id;
+
+
+--
 -- Name: clothes; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -268,6 +310,13 @@ ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.c
 
 
 --
+-- Name: clients id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.clients ALTER COLUMN id SET DEFAULT nextval('public.clients_id_seq'::regclass);
+
+
+--
 -- Name: clothes id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -322,6 +371,15 @@ COPY public.categories (id, name, link, image) FROM stdin;
 5	Щиты и прочее	/shields-and-others	/shield.svg
 1	Рюкзаки	/backpacks	/backpack.svg
 2	Бронежилеты и шлемы	/armors	/bodyarmor.svg
+\.
+
+
+--
+-- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.clients (id, name, total_price, goods_amount, date_of_transaction, email, country, city, phone, transaction_id) FROM stdin;
+3	Egor	200000	20	2022-11-16	s1lice.egor@gmail.com	Russia	Chita	89245000234	1671148350565
 \.
 
 
@@ -414,6 +472,13 @@ SELECT pg_catalog.setval('public.backpacks_id_seq', 10, true);
 --
 
 SELECT pg_catalog.setval('public.categories_id_seq', 5, true);
+
+
+--
+-- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.clients_id_seq', 3, true);
 
 
 --
