@@ -9,6 +9,7 @@ const clothesRouter = require('./clothesRouter')
 const shieldsRouter = require('./shieldsRouter')
 const backpacksRouter = require('./backpacksRouter')
 const guardsRouter = require('./guardsRouter')
+const clientRouter = require('./clientsRouter')
 const mailController = require('../controllers/mailController')
 
 router.get('/categories', async (req, res) => {
@@ -21,6 +22,7 @@ router.use('/clothes', clothesRouter)
 router.use('/shields', shieldsRouter)
 router.use('/backpacks', backpacksRouter)
 router.use('/guards', guardsRouter)
+router.use('/statistics', clientRouter)
 router.post('/create-order', mailController.createPurchase)
 
 module.exports = router
