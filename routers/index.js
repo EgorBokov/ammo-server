@@ -18,7 +18,7 @@ router.get('/categories', async (req, res) => {
         res.json(links.rows)
     } catch(e) {
         res.json({
-            message: "error"
+            message: e
         })
     }
 })
