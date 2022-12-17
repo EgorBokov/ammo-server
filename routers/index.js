@@ -13,8 +13,14 @@ const clientRouter = require('./clientsRouter')
 const mailController = require('../controllers/mailController')
 
 router.get('/categories', async (req, res) => {
-    const links = await db.query('SELECT * FROM categories;')
-    res.json(links.rows)
+    try {
+        const links = await db.query('SELECT * FROM categories;')
+        res.json(links.rows)
+    } catch(e) {
+        res.json({
+            message: "error"
+        })
+    }
 })
 
 router.use('/medicine', medicalRouter)
