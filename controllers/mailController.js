@@ -27,7 +27,6 @@ function generateResponse(data) {
 class MailController {
     async createPurchase(req, res) {
         const {phone, email, country, city, name} = req.body
-        console.log(req.body)
 
         const transport = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -92,6 +91,59 @@ class MailController {
         //     }
         // })
         res.json({message: "Сообщение было успешно отправлено!"})
+    }
+
+    async sendMailToOwner(req, res) {
+        const { name, phone } = req.body
+        const message = `Запрос на звонок от ${name} по номеру ${phone}`
+
+        const transport = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASSWORD
+            }
+        })
+
+        const outerMessage = {
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
+            subject: message,
+            text: ''
+        }
+
+        await transport.sendMail(outerMessage, (err) => {
+            if (err) {
+                console.log('Ошибка по ходу выполнения создания заявки обратного звонка!', err)
+            }
+        })
+
+        res.json({message: "Success!"})
+    }
+
+    async sendMail(email, outerMessage, text = '') {
+        const transport = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASSWORD
+            }
+        })
+
+        const message = {
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: outerMessage,
+            text
+        }
+
+        await transport.sendMail(message, (err) => {
+            console.log("Error while sending!", err)
+        })
     }
 }
 

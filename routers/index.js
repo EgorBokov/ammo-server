@@ -23,6 +23,8 @@ router.get('/categories', async (req, res) => {
     }
 })
 
+router.post('/callback', mailController.sendMailToOwner)
+
 router.use('/medicine', medicalRouter)
 router.use('/clothes', clothesRouter)
 router.use('/shields', shieldsRouter)
