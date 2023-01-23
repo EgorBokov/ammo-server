@@ -33,10 +33,10 @@ CREATE TABLE public.backpacks (
 );
 
 
-ALTER TABLE public.backpacks OWNER TO postgres;
+ALTER TABLE public.backpacks OWNER TO egorbokov;
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: backpacks_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.backpacks_id_seq
@@ -48,17 +48,17 @@ CREATE SEQUENCE public.backpacks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.backpacks_id_seq OWNER TO postgres;
+ALTER TABLE public.backpacks_id_seq OWNER TO egorbokov;
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: backpacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.backpacks_id_seq OWNED BY public.backpacks.id;
 
 
 --
--- Name: categories; Type: TABLE; Schema: public; Owner: postgres
+-- Name: categories; Type: TABLE; Schema: public; Owner: egorbokov
 --
 
 CREATE TABLE public.categories (
@@ -69,10 +69,10 @@ CREATE TABLE public.categories (
 );
 
 
-ALTER TABLE public.categories OWNER TO postgres;
+ALTER TABLE public.categories OWNER TO egorbokov;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.categories_id_seq
@@ -84,17 +84,17 @@ CREATE SEQUENCE public.categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.categories_id_seq OWNER TO postgres;
+ALTER TABLE public.categories_id_seq OWNER TO egorbokov;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
 
 
 --
--- Name: clients; Type: TABLE; Schema: public; Owner: postgres
+-- Name: clients; Type: TABLE; Schema: public; Owner: egorbokov
 --
 
 CREATE TABLE public.clients (
@@ -111,10 +111,10 @@ CREATE TABLE public.clients (
 );
 
 
-ALTER TABLE public.clients OWNER TO postgres;
+ALTER TABLE public.clients OWNER TO egorbokov;
 
 --
--- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.clients_id_seq
@@ -126,17 +126,17 @@ CREATE SEQUENCE public.clients_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.clients_id_seq OWNER TO postgres;
+ALTER TABLE public.clients_id_seq OWNER TO egorbokov;
 
 --
--- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.clients_id_seq OWNED BY public.clients.id;
 
 
 --
--- Name: clothes; Type: TABLE; Schema: public; Owner: postgres
+-- Name: clothes; Type: TABLE; Schema: public; Owner: egorbokov
 --
 
 CREATE TABLE public.clothes (
@@ -150,10 +150,10 @@ CREATE TABLE public.clothes (
 );
 
 
-ALTER TABLE public.clothes OWNER TO postgres;
+ALTER TABLE public.clothes OWNER TO egorbokov;
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: clothes_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.clothes_id_seq
@@ -165,17 +165,17 @@ CREATE SEQUENCE public.clothes_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.clothes_id_seq OWNER TO postgres;
+ALTER TABLE public.clothes_id_seq OWNER TO egorbokov;
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: clothes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.clothes_id_seq OWNED BY public.clothes.id;
 
 
 --
--- Name: guard; Type: TABLE; Schema: public; Owner: postgres
+-- Name: guard; Type: TABLE; Schema: public; Owner: egorbokov
 --
 
 CREATE TABLE public.guard (
@@ -188,14 +188,15 @@ CREATE TABLE public.guard (
     description text[],
     complectations text[],
     is_sertified boolean,
-    articul character varying(70)
+    articul character varying(70),
+    old_price integer
 );
 
 
-ALTER TABLE public.guard OWNER TO postgres;
+ALTER TABLE public.guard OWNER TO egorbokov;
 
 --
--- Name: guard_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: guard_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.guard_id_seq
@@ -207,17 +208,17 @@ CREATE SEQUENCE public.guard_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.guard_id_seq OWNER TO postgres;
+ALTER TABLE public.guard_id_seq OWNER TO egorbokov;
 
 --
--- Name: guard_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: guard_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.guard_id_seq OWNED BY public.guard.id;
 
 
 --
--- Name: medicine; Type: TABLE; Schema: public; Owner: postgres
+-- Name: medicine; Type: TABLE; Schema: public; Owner: egorbokov
 --
 
 CREATE TABLE public.medicine (
@@ -227,14 +228,15 @@ CREATE TABLE public.medicine (
     contents text[],
     price integer,
     image character varying(100),
-    articul character varying(50)
+    articul character varying(50),
+    old_price integer
 );
 
 
-ALTER TABLE public.medicine OWNER TO postgres;
+ALTER TABLE public.medicine OWNER TO egorbokov;
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: medicine_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.medicine_id_seq
@@ -246,17 +248,17 @@ CREATE SEQUENCE public.medicine_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.medicine_id_seq OWNER TO postgres;
+ALTER TABLE public.medicine_id_seq OWNER TO egorbokov;
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: medicine_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.medicine_id_seq OWNED BY public.medicine.id;
 
 
 --
--- Name: shields; Type: TABLE; Schema: public; Owner: postgres
+-- Name: shields; Type: TABLE; Schema: public; Owner: egorbokov
 --
 
 CREATE TABLE public.shields (
@@ -271,10 +273,10 @@ CREATE TABLE public.shields (
 );
 
 
-ALTER TABLE public.shields OWNER TO postgres;
+ALTER TABLE public.shields OWNER TO egorbokov;
 
 --
--- Name: shields_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: shields_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
 --
 
 CREATE SEQUENCE public.shields_id_seq
@@ -286,66 +288,66 @@ CREATE SEQUENCE public.shields_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.shields_id_seq OWNER TO postgres;
+ALTER TABLE public.shields_id_seq OWNER TO egorbokov;
 
 --
--- Name: shields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: shields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
 --
 
 ALTER SEQUENCE public.shields_id_seq OWNED BY public.shields.id;
 
 
 --
--- Name: backpacks id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: backpacks id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.backpacks ALTER COLUMN id SET DEFAULT nextval('public.backpacks_id_seq'::regclass);
 
 
 --
--- Name: categories id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: categories id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.categories_id_seq'::regclass);
 
 
 --
--- Name: clients id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: clients id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.clients ALTER COLUMN id SET DEFAULT nextval('public.clients_id_seq'::regclass);
 
 
 --
--- Name: clothes id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: clothes id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.clothes ALTER COLUMN id SET DEFAULT nextval('public.clothes_id_seq'::regclass);
 
 
 --
--- Name: guard id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: guard id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.guard ALTER COLUMN id SET DEFAULT nextval('public.guard_id_seq'::regclass);
 
 
 --
--- Name: medicine id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: medicine id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.medicine ALTER COLUMN id SET DEFAULT nextval('public.medicine_id_seq'::regclass);
 
 
 --
--- Name: shields id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: shields id; Type: DEFAULT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.shields ALTER COLUMN id SET DEFAULT nextval('public.shields_id_seq'::regclass);
 
 
 --
--- Data for Name: backpacks; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: backpacks; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
 COPY public.backpacks (id, name, image, sizes, articul) FROM stdin;
@@ -362,7 +364,7 @@ COPY public.backpacks (id, name, image, sizes, articul) FROM stdin;
 
 
 --
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
 COPY public.categories (id, name, link, image) FROM stdin;
@@ -375,7 +377,7 @@ COPY public.categories (id, name, link, image) FROM stdin;
 
 
 --
--- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
 COPY public.clients (id, name, total_price, goods_amount, date_of_transaction, email, country, city, phone, transaction_id) FROM stdin;
@@ -384,7 +386,7 @@ COPY public.clients (id, name, total_price, goods_amount, date_of_transaction, e
 
 
 --
--- Data for Name: clothes; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: clothes; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
 COPY public.clothes (id, name, price, image, description, sizes, articul) FROM stdin;
@@ -409,40 +411,40 @@ COPY public.clothes (id, name, price, image, description, sizes, articul) FROM s
 
 
 --
--- Data for Name: guard; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: guard; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
-COPY public.guard (id, name, images, price, prim, extra_info, description, complectations, is_sertified, articul) FROM stdin;
-3	Пуленепробиваемый шлем	{helmet3.png,helmet2-side.png}	15000	Есть отчет об испытаниях	\N	{{Материал,PE},{Размер,L},{Вес,1.45кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet31669246568517
-4	Пуленепробиваемая вставная пластина	{plastine1.png}	10440	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,III},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+AL2O3},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,35 +- 0,05кг/шт."}}	\N	t	plastine1669246582340
-7	Пуленепробиваемая вставная пластина	{plastine1.png}	17400	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,IV},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+SIC},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,45 +- 0,05кг/шт."}}	\N	t	plastine41669246634433
-1	Пуленепробиваемый шлем М88	{helmet1.png,helmet1-side.png}	8200	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.4кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet11669246499337
-2	Пуленепробиваемый шлем	{helmet2.png,helmet2-side.png}	13000	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.5кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet21669246555228
-5	Пуленепробиваемая вставная пластина	{plastine1.png}	15000	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,III},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+SIC},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,05 +- 0,05кг/шт."}}	\N	t	plastine21669246608117
-6	Пуленепробиваемая вставная пластина	{plastine1.png}	12200	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,IV},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+AL2O3},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,85 +- 0,05кг/шт."}}	\N	t	plastine31669246623657
-8	Разгрузочный жилет	{uploadguard.png}	3000	Есть отчет об испытаниях	\N	{{Вес,1.1кг.},{Ткань,"Оксфорд 600D"},{Характеристика,"Быстросохнущий, дышащий водостойкий, износостойкий, ветрозащитний, влагоотводящий."}}	\N	t	upload1669246647663
-10	Пуленепробиваемый жилет	{bulletguard2.png}	39000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,"IIIA III IV"},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,3-0,34м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"L, XL, 2XL, 3XL"},{Вес,"ок. 3,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard21669246677910
-12	Пуленепробиваемый жилет	{bulletguard4.png}	35600	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,35-0,42м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"L, XL, 2XL, 3XL"},{Вес,"ок. 3,65-4,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard41669246698318
-9	Пуленепробиваемый жилет	{bulletguard1.png}	70800	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади, сбоку, на шее и в области живота."},{"Защитная зона","0,52-0,62м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 2,65-7,25кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard1669246664828
-14	Пуленепробиваемый жилет	{bulletguard6.png}	25000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,"IIIA III IV"},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,3-0,34м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 2,65кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard61669246718372
-15	Пуленепробиваемый жилет NIJ3A	{bulletguard7.png,bulletguard7-side.png}	45000	Есть отчет об испытаниях	{"Жилет может быть оснащен как мягкими, так и жесткими пластинами."}	{{Ткань,Оксфорд},{"Пуленепробиваемый материал",Пластина.},{"Класс защиты от пуль",NIJ3A},{Масса,3кг.}}	{"Возможные комплектации","Пуленепробиваемая стальная бронепластина 2,3 мм.","Пуленепробиваемая стальная бронепластина 4,5 мм (NIJIII).","Пуленепробиваемая стальная бронепластина  6,0 мм (NIJIII+).","Керамическая (+оксид алюминия) бронепластина (NIJIII).","Керамическая (+оксид алюминия) бронепластина (NIJIII+).","Бронепластины из полиэтилена высокой плотности.","Керамическая (+карбид кремния) бронепластина (NIJIII)."}	t	guard71669246726653
-11	Пуленепробиваемый жилет	{bulletguard3.png}	38000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади, сбоку, на шее и в области живота."},{"Защитная зона","0,3-0,5м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 2,65-7,25кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard31669246685865
-13	Пуленепробиваемый жилет	{bulletguard5.png}	40000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,48-0,53м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 4,65-5,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard51669246707702
+COPY public.guard (id, name, images, price, prim, extra_info, description, complectations, is_sertified, articul, old_price) FROM stdin;
+3	Пуленепробиваемый шлем	{helmet3.png,helmet2-side.png}	15000	Есть отчет об испытаниях	\N	{{Материал,PE},{Размер,L},{Вес,1.45кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet31669246568517	\N
+4	Пуленепробиваемая вставная пластина	{plastine1.png}	10440	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,III},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+AL2O3},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,35 +- 0,05кг/шт."}}	\N	t	plastine1669246582340	\N
+7	Пуленепробиваемая вставная пластина	{plastine1.png}	17400	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,IV},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+SIC},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,45 +- 0,05кг/шт."}}	\N	t	plastine41669246634433	\N
+1	Пуленепробиваемый шлем М88	{helmet1.png,helmet1-side.png}	8200	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.4кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet11669246499337	\N
+2	Пуленепробиваемый шлем	{helmet2.png,helmet2-side.png}	13000	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.5кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet21669246555228	\N
+5	Пуленепробиваемая вставная пластина	{plastine1.png}	15000	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,III},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+SIC},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,05 +- 0,05кг/шт."}}	\N	t	plastine21669246608117	\N
+6	Пуленепробиваемая вставная пластина	{plastine1.png}	12200	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,IV},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+AL2O3},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,85 +- 0,05кг/шт."}}	\N	t	plastine31669246623657	\N
+8	Разгрузочный жилет	{uploadguard.png}	2480	Есть отчет об испытаниях	\N	{{Вес,1.1кг.},{Ткань,"Оксфорд 600D"},{Характеристика,"Быстросохнущий, дышащий водостойкий, износостойкий, ветрозащитний, влагоотводящий."}}	\N	t	upload1669246647663	3000
+10	Пуленепробиваемый жилет	{bulletguard2.png}	39000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,"IIIA III IV"},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,3-0,34м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"L, XL, 2XL, 3XL"},{Вес,"ок. 3,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard21669246677910	\N
+12	Пуленепробиваемый жилет	{bulletguard4.png}	35600	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,35-0,42м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"L, XL, 2XL, 3XL"},{Вес,"ок. 3,65-4,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard41669246698318	\N
+9	Пуленепробиваемый жилет	{bulletguard1.png}	70800	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади, сбоку, на шее и в области живота."},{"Защитная зона","0,52-0,62м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 2,65-7,25кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard1669246664828	\N
+14	Пуленепробиваемый жилет	{bulletguard6.png}	25000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,"IIIA III IV"},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,3-0,34м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 2,65кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard61669246718372	\N
+15	Пуленепробиваемый жилет NIJ3A	{bulletguard7.png,bulletguard7-side.png}	45000	Есть отчет об испытаниях	{"Жилет может быть оснащен как мягкими, так и жесткими пластинами."}	{{Ткань,Оксфорд},{"Пуленепробиваемый материал",Пластина.},{"Класс защиты от пуль",NIJ3A},{Масса,3кг.}}	{"Возможные комплектации","Пуленепробиваемая стальная бронепластина 2,3 мм.","Пуленепробиваемая стальная бронепластина 4,5 мм (NIJIII).","Пуленепробиваемая стальная бронепластина  6,0 мм (NIJIII+).","Керамическая (+оксид алюминия) бронепластина (NIJIII).","Керамическая (+оксид алюминия) бронепластина (NIJIII+).","Бронепластины из полиэтилена высокой плотности.","Керамическая (+карбид кремния) бронепластина (NIJIII)."}	t	guard71669246726653	\N
+11	Пуленепробиваемый жилет	{bulletguard3.png}	38000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади, сбоку, на шее и в области живота."},{"Защитная зона","0,3-0,5м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 2,65-7,25кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard31669246685865	\N
+13	Пуленепробиваемый жилет	{bulletguard5.png}	40000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,48-0,53м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"XL, 2XL, 3XL"},{Вес,"ок. 4,65-5,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard51669246707702	\N
 \.
 
 
 --
--- Data for Name: medicine; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: medicine; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
-COPY public.medicine (id, name, description, contents, price, image, articul) FROM stdin;
-1	Аптечка	{{"Тип продукта",Аптечка},{"Вес ткани",2кг},{Размер,"20*15*13 см"},{Цвет,"Черный, армейский, коричневый"},{"Стойкость цвета","4-5 класс"}}	{"Многофункциональный топор-молот","Cапёрная лопата",Ручка,Нож,"Карманный фонарик (без батарейки) (1шт.)","Пряжка для бутылки","Инструмент для розжига","Карабины (2шт.)","Сигнальный свисток","Проволочная пила",Компас,"Инструмент для обвязывания",Жгут,"Противоскользящие перчатки",Мультитул,Стропа,Аптечка,"Ватная палочка (30шт.)","Приспособления для ловли рыбы","Продувательная труба","Флюоресцентные палочки (2шт.)",Ножницы,Пинцет,"Бинты бандажные (2шт.)","Булавки (20шт.)","Скотч медицинский","Кровоостанавливающий жгут","Пластырь (20шт.)","Спиртовая салфетка (10шт.)","Повидон-Йод (10шт.)","Марлевая салфетка","Косыночная повязка","Дождевик (2шт.)","Салфетка первой помощи","Аварийная палатака","Военная сумка"}	5200	medical-kit.png	medkit1669156994550
-2	Подсумок под аптечки	{{"Тип продукта","Сумка под аптечки"},{"Вес ткани","0,25кг"},{Ткань,"600D нейлон"},{Размер,15*21*11см},{Цвет,"Черный, красный, оранжевый"},{"Стойкость цвета","4-5 класс"}}	\N	600	medical-subkit.png	medkit1669157008761
+COPY public.medicine (id, name, description, contents, price, image, articul, old_price) FROM stdin;
+2	Подсумок под аптечки	{{"Тип продукта","Сумка под аптечки"},{"Вес ткани","0,25кг"},{Ткань,"600D нейлон"},{Размер,15*21*11см},{Цвет,"Черный, красный, оранжевый"},{"Стойкость цвета","4-5 класс"}}	\N	480	medical-subkit.png	medkit1669157008761	600
+1	Аптечка	{{"Тип продукта",Аптечка},{"Вес ткани",2кг},{Размер,"20*15*13 см"},{Цвет,"Черный, армейский, коричневый"},{"Стойкость цвета","4-5 класс"}}	{"Многофункциональный топор-молот","Cапёрная лопата",Ручка,Нож,"Карманный фонарик (без батарейки) (1шт.)","Пряжка для бутылки","Инструмент для розжига","Карабины (2шт.)","Сигнальный свисток","Проволочная пила",Компас,"Инструмент для обвязывания",Жгут,"Противоскользящие перчатки",Мультитул,Стропа,Аптечка,"Ватная палочка (30шт.)","Приспособления для ловли рыбы","Продувательная труба","Флюоресцентные палочки (2шт.)",Ножницы,Пинцет,"Бинты бандажные (2шт.)","Булавки (20шт.)","Скотч медицинский","Кровоостанавливающий жгут","Пластырь (20шт.)","Спиртовая салфетка (10шт.)","Повидон-Йод (10шт.)","Марлевая салфетка","Косыночная повязка","Дождевик (2шт.)","Салфетка первой помощи","Аварийная палатака","Военная сумка"}	5200	medical-kit.png	medkit1669156994550	\N
 \.
 
 
 --
--- Data for Name: shields; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: shields; Type: TABLE DATA; Schema: public; Owner: egorbokov
 --
 
 COPY public.shields (id, name, description, price, images, annotation, extra_info, articul) FROM stdin;
@@ -461,56 +463,56 @@ COPY public.shields (id, name, description, price, images, annotation, extra_inf
 
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: backpacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.backpacks_id_seq', 10, true);
 
 
 --
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.categories_id_seq', 5, true);
 
 
 --
--- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.clients_id_seq', 3, true);
 
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: clothes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.clothes_id_seq', 17, true);
 
 
 --
--- Name: guard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: guard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.guard_id_seq', 15, true);
 
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: medicine_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.medicine_id_seq', 2, true);
 
 
 --
--- Name: shields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: shields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
 --
 
 SELECT pg_catalog.setval('public.shields_id_seq', 11, true);
 
 
 --
--- Name: backpacks backpacks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: backpacks backpacks_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.backpacks
@@ -518,7 +520,7 @@ ALTER TABLE ONLY public.backpacks
 
 
 --
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.categories
@@ -526,7 +528,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: clothes clothes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: clothes clothes_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.clothes
@@ -534,7 +536,7 @@ ALTER TABLE ONLY public.clothes
 
 
 --
--- Name: guard guard_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: guard guard_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.guard
@@ -542,7 +544,7 @@ ALTER TABLE ONLY public.guard
 
 
 --
--- Name: medicine medicine_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: medicine medicine_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.medicine
@@ -550,7 +552,7 @@ ALTER TABLE ONLY public.medicine
 
 
 --
--- Name: shields shields_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: shields shields_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
 --
 
 ALTER TABLE ONLY public.shields
@@ -558,7 +560,7 @@ ALTER TABLE ONLY public.shields
 
 
 --
--- Name: TABLE categories; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE categories; Type: ACL; Schema: public; Owner: egorbokov
 --
 
 GRANT ALL ON TABLE public.categories TO postgres;
