@@ -33,10 +33,10 @@ CREATE TABLE public.backpacks (
 );
 
 
-ALTER TABLE public.backpacks OWNER TO egorbokov;
+ALTER TABLE public.backpacks OWNER TO postgres;
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: backpacks_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.backpacks_id_seq
@@ -48,17 +48,17 @@ CREATE SEQUENCE public.backpacks_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.backpacks_id_seq OWNER TO egorbokov;
+ALTER TABLE public.backpacks_id_seq OWNER TO postgres;
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: backpacks_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.backpacks_id_seq OWNED BY public.backpacks.id;
 
 
 --
--- Name: categories; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: categories; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.categories (
@@ -69,10 +69,10 @@ CREATE TABLE public.categories (
 );
 
 
-ALTER TABLE public.categories OWNER TO egorbokov;
+ALTER TABLE public.categories OWNER TO postgres;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.categories_id_seq
@@ -84,17 +84,17 @@ CREATE SEQUENCE public.categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.categories_id_seq OWNER TO egorbokov;
+ALTER TABLE public.categories_id_seq OWNER TO postgres;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.categories_id_seq OWNED BY public.categories.id;
 
 
 --
--- Name: clients; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: clients; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.clients (
@@ -111,10 +111,10 @@ CREATE TABLE public.clients (
 );
 
 
-ALTER TABLE public.clients OWNER TO egorbokov;
+ALTER TABLE public.clients OWNER TO postgres;
 
 --
--- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.clients_id_seq
@@ -126,17 +126,17 @@ CREATE SEQUENCE public.clients_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.clients_id_seq OWNER TO egorbokov;
+ALTER TABLE public.clients_id_seq OWNER TO postgres;
 
 --
--- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.clients_id_seq OWNED BY public.clients.id;
 
 
 --
--- Name: clothes; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: clothes; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.clothes (
@@ -151,10 +151,10 @@ CREATE TABLE public.clothes (
 );
 
 
-ALTER TABLE public.clothes OWNER TO egorbokov;
+ALTER TABLE public.clothes OWNER TO postgres;
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: clothes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.clothes_id_seq
@@ -166,17 +166,17 @@ CREATE SEQUENCE public.clothes_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.clothes_id_seq OWNER TO egorbokov;
+ALTER TABLE public.clothes_id_seq OWNER TO postgres;
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: clothes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.clothes_id_seq OWNED BY public.clothes.id;
 
 
 --
--- Name: guard; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: guard; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.guard (
@@ -194,10 +194,10 @@ CREATE TABLE public.guard (
 );
 
 
-ALTER TABLE public.guard OWNER TO egorbokov;
+ALTER TABLE public.guard OWNER TO postgres;
 
 --
--- Name: guard_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: guard_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.guard_id_seq
@@ -209,17 +209,17 @@ CREATE SEQUENCE public.guard_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.guard_id_seq OWNER TO egorbokov;
+ALTER TABLE public.guard_id_seq OWNER TO postgres;
 
 --
--- Name: guard_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: guard_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.guard_id_seq OWNED BY public.guard.id;
 
 
 --
--- Name: medicine; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: medicine; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.medicine (
@@ -234,10 +234,10 @@ CREATE TABLE public.medicine (
 );
 
 
-ALTER TABLE public.medicine OWNER TO egorbokov;
+ALTER TABLE public.medicine OWNER TO postgres;
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: medicine_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.medicine_id_seq
@@ -249,17 +249,17 @@ CREATE SEQUENCE public.medicine_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.medicine_id_seq OWNER TO egorbokov;
+ALTER TABLE public.medicine_id_seq OWNER TO postgres;
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: medicine_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.medicine_id_seq OWNED BY public.medicine.id;
 
 
 --
--- Name: shields; Type: TABLE; Schema: public; Owner: egorbokov
+-- Name: shields; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.shields (
@@ -274,10 +274,10 @@ CREATE TABLE public.shields (
 );
 
 
-ALTER TABLE public.shields OWNER TO egorbokov;
+ALTER TABLE public.shields OWNER TO postgres;
 
 --
--- Name: shields_id_seq; Type: SEQUENCE; Schema: public; Owner: egorbokov
+-- Name: shields_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.shields_id_seq
@@ -289,66 +289,66 @@ CREATE SEQUENCE public.shields_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.shields_id_seq OWNER TO egorbokov;
+ALTER TABLE public.shields_id_seq OWNER TO postgres;
 
 --
--- Name: shields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: egorbokov
+-- Name: shields_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.shields_id_seq OWNED BY public.shields.id;
 
 
 --
--- Name: backpacks id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: backpacks id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.backpacks ALTER COLUMN id SET DEFAULT nextval('public.backpacks_id_seq'::regclass);
 
 
 --
--- Name: categories id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: categories id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN id SET DEFAULT nextval('public.categories_id_seq'::regclass);
 
 
 --
--- Name: clients id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: clients id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.clients ALTER COLUMN id SET DEFAULT nextval('public.clients_id_seq'::regclass);
 
 
 --
--- Name: clothes id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: clothes id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.clothes ALTER COLUMN id SET DEFAULT nextval('public.clothes_id_seq'::regclass);
 
 
 --
--- Name: guard id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: guard id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.guard ALTER COLUMN id SET DEFAULT nextval('public.guard_id_seq'::regclass);
 
 
 --
--- Name: medicine id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: medicine id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.medicine ALTER COLUMN id SET DEFAULT nextval('public.medicine_id_seq'::regclass);
 
 
 --
--- Name: shields id; Type: DEFAULT; Schema: public; Owner: egorbokov
+-- Name: shields id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.shields ALTER COLUMN id SET DEFAULT nextval('public.shields_id_seq'::regclass);
 
 
 --
--- Data for Name: backpacks; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: backpacks; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.backpacks (id, name, image, sizes, articul) FROM stdin;
@@ -365,7 +365,7 @@ COPY public.backpacks (id, name, image, sizes, articul) FROM stdin;
 
 
 --
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.categories (id, name, link, image) FROM stdin;
@@ -378,7 +378,7 @@ COPY public.categories (id, name, link, image) FROM stdin;
 
 
 --
--- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.clients (id, name, total_price, goods_amount, date_of_transaction, email, country, city, phone, transaction_id) FROM stdin;
@@ -387,7 +387,7 @@ COPY public.clients (id, name, total_price, goods_amount, date_of_transaction, e
 
 
 --
--- Data for Name: clothes; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: clothes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.clothes (id, name, price, image, description, sizes, articul, old_price) FROM stdin;
@@ -412,17 +412,17 @@ COPY public.clothes (id, name, price, image, description, sizes, articul, old_pr
 
 
 --
--- Data for Name: guard; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: guard; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.guard (id, name, images, price, prim, extra_info, description, complectations, is_sertified, articul, old_price) FROM stdin;
-3	Пуленепробиваемый шлем	{helmet3.png,helmet2-side.png}	15000	Есть отчет об испытаниях	\N	{{Материал,PE},{Размер,L},{Вес,1.45кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet31669246568517	\N
 4	Пуленепробиваемая вставная пластина	{plastine1.png}	10440	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,III},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+AL2O3},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,35 +- 0,05кг/шт."}}	\N	t	plastine1669246582340	\N
 7	Пуленепробиваемая вставная пластина	{plastine1.png}	17400	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,IV},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+SIC},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,45 +- 0,05кг/шт."}}	\N	t	plastine41669246634433	\N
 1	Пуленепробиваемый шлем М88	{helmet1.png,helmet1-side.png}	8200	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.4кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet11669246499337	\N
-2	Пуленепробиваемый шлем	{helmet2.png,helmet2-side.png}	13000	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.5кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet21669246555228	\N
 5	Пуленепробиваемая вставная пластина	{plastine1.png}	15000	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,III},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+SIC},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,05 +- 0,05кг/шт."}}	\N	t	plastine21669246608117	\N
 6	Пуленепробиваемая вставная пластина	{plastine1.png}	12200	Есть отчет об испытаниях	{"Надписи и изображение возможно изменять на усмотрение заказчика."}	{{Производительность,IV},{"Защитная зона","0,075м2"},{"Баллистический материал",PE+AL2O3},{"Материал корпуса","Яркий водонепроницаемый полиэстер"},{Размер,250*300мм.},{Вес,"ок. 2,85 +- 0,05кг/шт."}}	\N	t	plastine31669246623657	\N
+3	Пуленепробиваемый шлем	{helmet3.png,helmet2-side.png}	13500	Есть отчет об испытаниях	\N	{{Материал,PE},{Размер,L},{Вес,1.45кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet31669246568517	15000
+2	Пуленепробиваемый шлем	{helmet2.png,helmet2-side.png}	10500	Есть отчет об испытаниях	\N	{{Материал,Полиэтилен},{Размер,L},{Вес,1.5кг.},{"Пулнепробиваемый рейтинг","NIJ IIIA (0,44мм.)"},{Цвет,"Черный, армейский, зеленый, песочный"}}	\N	t	helmet21669246555228	13000
 8	Разгрузочный жилет	{uploadguard.png}	2480	Есть отчет об испытаниях	\N	{{Вес,1.1кг.},{Ткань,"Оксфорд 600D"},{Характеристика,"Быстросохнущий, дышащий водостойкий, износостойкий, ветрозащитний, влагоотводящий."}}	\N	t	upload1669246647663	3000
 10	Пуленепробиваемый жилет	{bulletguard2.png}	39000	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,"IIIA III IV"},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,3-0,34м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"L, XL, 2XL, 3XL"},{Вес,"ок. 3,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard21669246677910	\N
 12	Пуленепробиваемый жилет	{bulletguard4.png}	35600	Есть отчет об испытаниях	{"Варианты пуленепробиваемой пластины","1. Стандартная мягкая пуленепробиваемая панель IIIA.","2. Стандарт IIIA пуленепробиваемый + I/II стандартная противоударная мягкая панель.","3. Стандартная пуленепробиваемая жесткая пластина III/IV (250*300 мм/шт.).","4. Варианты 1 или 2 сочетаются с вариантом 3.","Жилет может быть оснащен как мягкими, так и жесткими пластинами.","Цена варьируется в зависимости от опций."}	{{Производительность,IIIA},{"Защитное покрытие","Спереди, сзади."},{"Защитная зона","0,35-0,42м2"},{"Баллистический материал","Многослойный UHMW-PE (полиэтилен)"},{"Противотравматическая накладка","Изготовлена из поликарбоната (ПК) и высокой плотности."},{Подкладка,Съемная},{"Материал корпуса","Яркий водонепроницаемый нейлон."},{Размер,"L, XL, 2XL, 3XL"},{Вес,"ок. 3,65-4,5кг/шт."},{Цвет,"Белый, черный, OG, синий, по запросу."}}	\N	t	guard41669246698318	\N
@@ -435,7 +435,7 @@ COPY public.guard (id, name, images, price, prim, extra_info, description, compl
 
 
 --
--- Data for Name: medicine; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: medicine; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.medicine (id, name, description, contents, price, image, articul, old_price) FROM stdin;
@@ -445,7 +445,7 @@ COPY public.medicine (id, name, description, contents, price, image, articul, ol
 
 
 --
--- Data for Name: shields; Type: TABLE DATA; Schema: public; Owner: egorbokov
+-- Data for Name: shields; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.shields (id, name, description, price, images, annotation, extra_info, articul) FROM stdin;
@@ -464,56 +464,56 @@ COPY public.shields (id, name, description, price, images, annotation, extra_inf
 
 
 --
--- Name: backpacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: backpacks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.backpacks_id_seq', 10, true);
 
 
 --
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.categories_id_seq', 5, true);
 
 
 --
--- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.clients_id_seq', 3, true);
 
 
 --
--- Name: clothes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: clothes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.clothes_id_seq', 17, true);
 
 
 --
--- Name: guard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: guard_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.guard_id_seq', 15, true);
 
 
 --
--- Name: medicine_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: medicine_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.medicine_id_seq', 2, true);
 
 
 --
--- Name: shields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: egorbokov
+-- Name: shields_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.shields_id_seq', 11, true);
 
 
 --
--- Name: backpacks backpacks_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: backpacks backpacks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.backpacks
@@ -521,7 +521,7 @@ ALTER TABLE ONLY public.backpacks
 
 
 --
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.categories
@@ -529,7 +529,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: clothes clothes_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: clothes clothes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.clothes
@@ -537,7 +537,7 @@ ALTER TABLE ONLY public.clothes
 
 
 --
--- Name: guard guard_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: guard guard_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.guard
@@ -545,7 +545,7 @@ ALTER TABLE ONLY public.guard
 
 
 --
--- Name: medicine medicine_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: medicine medicine_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.medicine
@@ -553,7 +553,7 @@ ALTER TABLE ONLY public.medicine
 
 
 --
--- Name: shields shields_pkey; Type: CONSTRAINT; Schema: public; Owner: egorbokov
+-- Name: shields shields_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.shields
@@ -561,7 +561,7 @@ ALTER TABLE ONLY public.shields
 
 
 --
--- Name: TABLE categories; Type: ACL; Schema: public; Owner: egorbokov
+-- Name: TABLE categories; Type: ACL; Schema: public; Owner: postgres
 --
 
 GRANT ALL ON TABLE public.categories TO postgres;
